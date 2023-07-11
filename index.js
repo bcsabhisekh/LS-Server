@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true, }));
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://heartfelt-brioche-9caa8e.netlify.app/"],
+        origin: ["https://heartfelt-brioche-9caa8e.netlify.app"],
         methods: ["POST", "GET", "PUT", "PATCH"],
         credentials: true
     }
@@ -38,7 +38,7 @@ app.use(session({
 
 const io = new Server(server, {
     cors: {
-        origin: "https://heartfelt-brioche-9caa8e.netlify.app/",
+        origin: ["https://heartfelt-brioche-9caa8e.netlify.app"],
         methods: ["POST", "GET", "PUT", "PATCH"],
     }
 })
