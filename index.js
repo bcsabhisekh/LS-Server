@@ -10,6 +10,7 @@ import http from "http";
 import { Server } from "socket.io";
 const app = express();
 const server = http.createServer(app);
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 
@@ -67,6 +68,6 @@ app.all("*", function (req, res) {
     res.send("This Route doesn't exist");
 });
 
-server.listen(process.env.PORT, function () {
-    console.log("Server is running at port " + process.env.PORT);
+server.listen(PORT, function () {
+    console.log("Server is running at port " + PORT);
 });
